@@ -1,6 +1,7 @@
 
-import React from 'react';
-import {makeStyles} from "@material-ui/core/styles"
+import React,{useState} from 'react';
+import {makeStyles} from "@material-ui/core/styles";
+import MobilRightMenuSlider from "@material-ui/core/Drawer";
 import {
     AppBar,
     Toolbar,
@@ -70,36 +71,55 @@ const menuItems=[
 
 
 const Navbar = () => {
+    const [state,setState]=useState({
+        right:false,
+
+    });
+
+    const toggleSlider=((slider,open)=>()=>{
+        setState({...state,[slider]:open})
+    });
+
     const classes=useStyles();
+
+    const sideList=slider=>{
+        <Box className={classes.sliderContainer}>
+            <Avatar className={classes.avatar} src={av2} alt='Linux Icon'/>
+            <Divider />
+            <List>
+                {menuItems.map((lstItem,key)=>(
+                    <ListItem button key={key}>
+                        <ListItemIcon className={classes.listItem}>
+                            {lstItem.listIcon}
+                        </ListItemIcon>
+                        <ListItemText primary={lstItem.listText} className={classes.listItem}/>
+                    </ListItem>
+
+                ))}
+                
+            </List>
+
+        </Box>
+
+    }
+
     return (
         <>
-            <Box className={classes.sliderContainer}>
-                <Avatar className={classes.avatar} src={av2} alt='Linux Icon'/>
-                <Divider />
-                <List>
-                    {menuItems.map((lstItem,key)=>(
-                        <ListItem button key={key}>
-                            <ListItemIcon className={classes.listItem}>
-                                {lstItem.listIcon}
-                            </ListItemIcon>
-                            <ListItemText />
-                        </ListItem>
-
-                    ))}
-                    
-                </List>
-
-            </Box>
+            
             <AppBar position="static" style={{ background:"#333" }}>
                 <Toolbar>
 
-                    <IconButton>
+                    <IconButton onClick={toggleSlider("right",true)}>
                         <ArrowBack  style={{color:"tomato"}}/>
                     </IconButton>
 
                     <Typography variant="h5" style={{ color:"tan" }}>
                         Portfolio
                     </Typography>
+
+                    <MobilRightMenuSlider anchor="right" open={state.right}>
+                        {sideList("right")}
+                    </MobilRightMenuSlider>
 
                 </Toolbar>
             
