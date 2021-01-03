@@ -1,7 +1,8 @@
 
-import React,{useState} from 'react';
+import React, { useState } from 'react'
 import {makeStyles} from "@material-ui/core/styles";
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
+
 import {
     AppBar,
     Toolbar,
@@ -15,34 +16,32 @@ import {
     Typography,
     Box
 } from "@material-ui/core";
-import {
+import { 
     ArrowBack,
     AssignmentInd,
     Home,
     Apps,
-    ContactMail
-} from "@material-ui/icons";
-import av2 from "./linuxm.png"
-
-
+    ContactMail 
+} from '@material-ui/icons';
+import av2 from "./images/linuxm.png"
 
 
 const useStyles=makeStyles(theme=>({
-    sliderContainer:{
+    menuSlider:{
         width:250,
         background:"#511",
-        height:"30rem"
+        height:"100%"
     },
     avatar:{
         display:"block",
         margin:".5rem auto",
-        width:theme.spacing(13),
-        height:theme.spacing(13)
+        width:theme.spacing(25),
+        height:theme.spacing(25),
     },
-    listItem:{
+    listItems:{
         color:"tan"
     }
-}));
+}))
 
 
 const menuItems=[
@@ -69,64 +68,56 @@ const menuItems=[
 ]
 
 
-
 const Navbar = () => {
-    const [state,setState]=useState({
-        right:false,
-
-    });
-
-    const toggleSlider=((slider,open)=>()=>{
-        setState({...state,[slider]:open})
-    });
-
     const classes=useStyles();
+    const [state,setState]=useState({ right: false });
 
-    const sideList=slider=>{
-        <Box className={classes.sliderContainer}>
-            <Avatar className={classes.avatar} src={av2} alt='Linux Icon'/>
-            <Divider />
-            <List>
-                {menuItems.map((lstItem,key)=>(
-                    <ListItem button key={key}>
-                        <ListItemIcon className={classes.listItem}>
-                            {lstItem.listIcon}
-                        </ListItemIcon>
-                        <ListItemText primary={lstItem.listText} className={classes.listItem}/>
-                    </ListItem>
-
-                ))}
-                
-            </List>
-
-        </Box>
-
+    const toggleSlider=(slider,open)=>()=>{
+        setState({...state,[slider]:open})
     }
 
+    const sideList=slider=>(
+        <Box component="div" className={classes.menuSlider} onClick={toggleSlider("right",false)}>
+            <Avatar  src={av2} alt="photo" className={classes.avatar}/>
+            <Divider/>
+            <List>
+                {menuItems.map((item,key)=>(
+                        <ListItem key={key} button>
+                            <ListItemIcon className={classes.listItems}>
+                                {item.listIcon}
+                            </ListItemIcon>
+
+                            <ListItemText className={classes.listItems} primary={item.listText}>{item.listText}</ListItemText>
+                        </ListItem>
+                ))}                    
+                
+            </List>
+        </Box>
+    )
     return (
         <>
-            
-            <AppBar position="static" style={{ background:"#333" }}>
-                <Toolbar>
 
-                    <IconButton onClick={toggleSlider("right",true)}>
-                        <ArrowBack  style={{color:"tomato"}}/>
-                    </IconButton>
+            <Box component="nav">
+                <AppBar position="static" style={{ background:"#222" }}>
+                    <Toolbar>
+                        <IconButton onClick={toggleSlider("right",true)}>
 
-                    <Typography variant="h5" style={{ color:"tan" }}>
-                        Portfolio
-                    </Typography>
+                            <ArrowBack style={{ background:"tomato" }}/>
+                        </IconButton>
 
-                    <MobilRightMenuSlider anchor="right" open={state.right}>
-                        {sideList("right")}
-                    </MobilRightMenuSlider>
+                        <Typography variant="h5">Portfolio</Typography>
 
-                </Toolbar>
-            
-            </AppBar>
+                        <MobilRightMenuSlider open={state.right} anchor="right" onClose={toggleSlider("right",false)}>
+                            {sideList("right")}
+                        </MobilRightMenuSlider>
+                    </Toolbar>
+
+                </AppBar>
+                
+            </Box>
         </>
-
+        
     )
 }
 
-export default Navbar;
+export default Navbar

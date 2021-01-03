@@ -8,9 +8,10 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <CssBaseline>
+    <>
+      <CssBaseline />
       <Home />
-    </CssBaseline>
+    </>
   );
 }
 
