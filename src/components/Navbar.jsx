@@ -16,6 +16,7 @@ import {
     Typography,
     Box
 } from "@material-ui/core";
+import {Link} from "react-router-dom";
 import { 
     ArrowBack,
     AssignmentInd,
@@ -47,22 +48,26 @@ const useStyles=makeStyles(theme=>({
 const menuItems=[
     {
         listIcon:<Home />,
-        listText:"Home"
+        listText:"Home",
+        listPath:"/"
     },
 
     {
         listIcon:<AssignmentInd />,
-        listText:"Resume"
+        listText:"Resume",
+        listPath:"/resume"
     },
 
     {
         listIcon:<Apps />,
-        listText:"Portfolio"
+        listText:"Portfolio",
+        listPath:"/portfolio"
     },
 
     {
         listIcon:<ContactMail />,
-        listText:"Contacts"
+        listText:"Contacts",
+        listPath:"/contacts"
     },
     
 ]
@@ -82,7 +87,7 @@ const Navbar = () => {
             <Divider/>
             <List>
                 {menuItems.map((item,key)=>(
-                        <ListItem key={key} button>
+                        <ListItem key={key} button component={Link} to={item.listPath}>
                             <ListItemIcon className={classes.listItems}>
                                 {item.listIcon}
                             </ListItemIcon>
