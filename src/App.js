@@ -3,6 +3,7 @@ import {Route} from "react-router-dom";
 import {CssBaseline} from "@material-ui/core";
 import Home from "./components/Home";
 import Resume from "./components/Resume"
+import Portfolio from "./components/Portfolio";
 
 import "./App.css"
 
@@ -15,7 +16,8 @@ function App() {
     <>
       <CssBaseline />
       <Route exact path="/" component={Home}/>
-      <Route path="/" component={Resume}/>
+      <Route path="/resume" component={Resume}/>
+      <Route path="/portfolio" component={Portfolio}/>
     </>
   );
 }
