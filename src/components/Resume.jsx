@@ -6,54 +6,50 @@ import Navbar from "./Navbar"
 
 
 
-const useStyle = makeStyles(theme =>({
+const useStyles = makeStyles(theme =>({
     mainContiner:{
         background:'#233'
     },
-
     timeLine:{
-        position:'relative',
-        padding: '1rem',
-        margin:'0 auto',
-        '&:before':{
-            content: "''",
-            position:'absolute',
-            height:'100%',
-            border:'1px solid tan',
-            right:'40px',
+        position:"relative",
+        padding:"1rem",
+        margin:"0 auto",
+        "&:before":{
+            content:"''",
+            position:"absolute",
+            height:"100%",
+            border:"1px solid white",
+            right:"40px",
             top:0
         },
-
-        '&:after':{
+        "&:after":{
             content:"''",
-            display:'table',
-            clear:'both'
+            display:"table",
+            clear:"both"
         },
-
-        [theme.breakpoints.up('md')]: {
-            padding:'2rem',
-            '&:before':{
-                left:'calc(50% -1px)',
-                right:'auto'
-          }    
-
+        [theme.breakpoints.up("md")]:{
+            padding:"2rem",
+            "&:before":{
+                left:"calc(50% - 1px)",
+                right:"auto"
+            }
         }
-
     }
 
-}))
+}));
 
 
 
 
 const Resume = () => {
+    const classes=useStyles();
     return (
         <div>
             <Navbar />
-            <Box component="header">
+            <Box component="header" className={classes.mainContiner}>
                 <Typography variant="h4" align="center">Working Experience</Typography>
 
-                <Box component="div">
+                <Box component="div" className={classes.timeLine}>
                     <Typography variant="h3">
                         2019
                     </Typography>
