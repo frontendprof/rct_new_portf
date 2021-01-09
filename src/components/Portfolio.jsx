@@ -63,9 +63,8 @@ const Portfolio = () => {
                                     Project 1
                                 </Typography>
 
-                                <Typography component="p" color="textSecondary" variant="body2">
-                                    Lorem, ipsum dolor sit ame distinctio, explicabo non quaerat deserunt sit architecto voluptate et ullam dolore nam impedit magni, vero labore ratione consequuntur quibusdam, voluptas laudantium?
-
+                                <Typography variant="p" color="textSecondary" variant="body2">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque labore, quidem fuga obcaecati iste culpa maxime incidunt ab tempora dolorum recusandae amet vitae illum minus! Esse maxime saepe voluptates dolores.
                                 </Typography>
 
                             </CardContent>
@@ -100,8 +99,8 @@ const Portfolio = () => {
                                     Project 2
                                 </Typography>
 
-                                <Typography component="p" color="textSecondary" variant="body2">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus distinctio, explicabo non quaerat deserunt sit architecto voluptate et ullam dolore nam impedit magni, vero labore ratione consequuntur quibusdam, voluptas laudantium?
+                                <Typography variant="p" color="textSecondary" variant="body2">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates porro, molestias tempora temporibus corrupti sint sequi modi excepturi dolor enim, eligendi inventore, unde aut. Officiis vitae repellat placeat doloribus consequuntur?
 
                                 </Typography>
 
@@ -137,7 +136,7 @@ const Portfolio = () => {
                                 </Typography>
 
                                 <Typography component="p" color="textSecondary" variant="body2">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus distinctio, explicabo non quaerat deserunt sit architecas laudantium?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum non delectus eligendi, sit iusto accusantium error eaque perspiciatis at ipsa autem officia praesentium laborum modi dignissimos, magnam eos illo ut.
 
                                 </Typography>
 
@@ -174,8 +173,7 @@ const Portfolio = () => {
                                 </Typography>
 
                                 <Typography component="p" color="textSecondary" variant="body2">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus distinctio, explicabo non quaerat deserunt sit architecto voluptate et ullam dolore nam impedit magni, vero labore ratione consequuntur quibusdam, voluptas laudantium?
-
+                                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus nemo rerum ex saepe incidunt cupiditate rem eos perferendis dicta corporis impedit obcaecati placeat quidem, delectus ipsum in at tempora harum.
                                 </Typography>
 
                             </CardContent>
