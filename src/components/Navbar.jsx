@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import {makeStyles} from "@material-ui/core/styles";
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
 
+import Footer from "./Footer"
+
 import {
     AppBar,
     Toolbar,
@@ -114,6 +116,7 @@ const Navbar = () => {
 
                         <MobilRightMenuSlider open={state.right} anchor="right" onClose={toggleSlider("right",false)}>
                             {sideList("right")}
+                            <Footer />
                         </MobilRightMenuSlider>
                     </Toolbar>
 
