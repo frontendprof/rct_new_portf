@@ -49,7 +49,7 @@ const Header = () => {
 
             <Typography variant="h4" className={classes.title}>
                 <Typed
-                    strings={['AbdulMalik Sharif '] }
+                    strings={['Abdumalik Sharipov '] }
                     typeSpeed={20}
                 />
             </Typography>
