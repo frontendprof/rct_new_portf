@@ -63,7 +63,7 @@ const Portfolio = () => {
                                     Project 1
                                 </Typography>
 
-                                <Typography variant="p" color="textSecondary" variant="body2">
+                                <Typography component="p" color="textSecondary" variant="body2">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque labore, quidem fuga obcaecati iste culpa maxime incidunt ab tempora dolorum recusandae amet vitae illum minus! Esse maxime saepe voluptates dolores.
                                 </Typography>
 
@@ -99,7 +99,7 @@ const Portfolio = () => {
                                     Project 2
                                 </Typography>
 
-                                <Typography variant="p" color="textSecondary" variant="body2">
+                                <Typography component="p" color="textSecondary" variant="body2">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates porro, molestias tempora temporibus corrupti sint sequi modi excepturi dolor enim, eligendi inventore, unde aut. Officiis vitae repellat placeat doloribus consequuntur?
 
                                 </Typography>
