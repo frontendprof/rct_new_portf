@@ -16,6 +16,8 @@ import project_1 from "../images/html-css-javascript-lg.jpg"
 import project_2 from "../images/javascript-fullstack.jpg"
 import project_3 from "../images/mern-stack.jpg"
 import project_4 from "../images/react-redux.jpg"
+import project_5 from "../images/next-world-ranks.png"
+import project_6 from "../images/crypto.png"
 
 import Navbar from './Navbar'
 
@@ -45,6 +47,80 @@ const Portfolio = () => {
             <Navbar />
             <Grid container justify="center" alignItems="center">
 
+
+                 {/* Project Five*/}
+                <Grid item xs={12} sm={8} md={6} onClick={()=>window.open("https://next-world-ranks-nine.vercel.app/")}>
+
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                alt="project_2"
+                                height="140"
+                                image={project_5}
+                                />
+
+                            <CardContent>
+
+                                <Typography gutterBottom variant="h5">
+                                    Next-world-ranks
+                                </Typography>
+
+                                <Typography component="p" color="textSecondary" variant="body2">
+                                    Fetching API from restcountries.eu
+                                    List all given 250 countries name/population/area/gini. 
+                                    Upon click on each of them, one would be redirected to /country/[app3Code].
+                                    And there one can find detailed info about clicked country. Responsive made possible too.
+
+                                </Typography>
+
+                            </CardContent>
+                        </CardActionArea>
+
+                           
+                            
+
+
+                    </Card>
+                </Grid>
+
+
+
+                                 {/* Project Six*/}
+                <Grid item xs={12} sm={8} md={6} onClick={()=>window.open("https://https://next-crypto-app-re0ofppfw-frontendprof.vercel.app/")}>
+
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                alt="project_2"
+                                height="140"
+                                image={project_6}
+                                />
+
+                            <CardContent>
+
+                                <Typography gutterBottom variant="h5">
+                                    Next-crypto-app
+                                </Typography>
+
+                                <Typography component="p" color="textSecondary" variant="body2">
+                                    Fetching API from coingecko.com 
+                                    Fetching first 10 crypto currencies with increasing/decreasing percentage in the market, marketcap info and so on.
+                                    Upon click on each of them, you can redirected /coin/[id] route and can see detailed info about clicked crypto currency.
+
+                                </Typography>
+
+                            </CardContent>
+                        </CardActionArea>
+
+                           
+                            
+
+
+                    </Card>
+                </Grid>
+
                 {/* Project One */}
                 <Grid item xs={12} sm={8} md={6}>
 
@@ -70,10 +146,7 @@ const Portfolio = () => {
                             </CardContent>
                         </CardActionArea>
 
-                            <CardActions>
-                                <Button size="small" color="primary">Share</Button>
-                                <Button size="small" color="primary">Live Demo</Button>
-                            </CardActions>
+                           
                             
 
 
@@ -107,10 +180,7 @@ const Portfolio = () => {
                             </CardContent>
                         </CardActionArea>
 
-                            <CardActions>
-                                <Button size="small" color="primary">Share</Button>
-                                <Button size="small" color="primary">Live Demo</Button>
-                            </CardActions>
+                           
                             
 
 
@@ -143,10 +213,7 @@ const Portfolio = () => {
                             </CardContent>
                         </CardActionArea>
 
-                            <CardActions>
-                                <Button size="small" color="primary">Share</Button>
-                                <Button size="small" color="primary">Live Demo</Button>
-                            </CardActions>
+                           
                             
 
 
@@ -179,10 +246,7 @@ const Portfolio = () => {
                             </CardContent>
                             </CardActionArea>
 
-                            <CardActions>
-                                <Button size="small" color="primary">Share</Button>
-                                <Button size="small" color="primary">Live Demo</Button>
-                            </CardActions>
+                           
                             
 
 
