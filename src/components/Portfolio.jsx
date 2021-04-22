@@ -18,6 +18,7 @@ import project_3 from "../images/mern-stack.jpg"
 import project_4 from "../images/react-redux.jpg"
 import project_5 from "../images/next-world-ranks.png"
 import project_6 from "../images/crypto.png"
+import project_7 from "../images/sahna.png"
 
 import Navbar from './Navbar'
 
@@ -86,8 +87,47 @@ const Portfolio = () => {
 
 
 
+
+
+                {/* Project Seven*/}
+                <Grid item xs={12} sm={8} md={6} onClick={()=>window.open("https://react-sahna-app.vercel.app/")}>
+
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                alt="project_2"
+                                height="140"
+                                image={project_7}
+                                />
+
+                            <CardContent>
+
+                                <Typography gutterBottom variant="h5">
+                                    React-sahna-app
+                                </Typography>
+
+                                <Typography component="p" color="textSecondary" variant="body2">
+                                    Creating the venue app that countdowns how many days/hours/minutes/seconds left till the event would take place. 
+                                    With some extra functionalities such as hightlights, pricing,location applied with react-awesome-reveal, react-scroll, carousel, etc.
+                                    We'll fix its responsiveness later.
+                                </Typography>
+
+                            </CardContent>
+                        </CardActionArea>
+
+                           
+                            
+
+
+                    </Card>
+                </Grid>
+
+
+
+
                                  {/* Project Six*/}
-                <Grid item xs={12} sm={8} md={6} onClick={()=>window.open("https://https://next-crypto-app-re0ofppfw-frontendprof.vercel.app/")}>
+                <Grid item xs={12} sm={8} md={6} onClick={()=>window.open("https://next-crypto-app.vercel.app/")}>
 
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
@@ -108,6 +148,7 @@ const Portfolio = () => {
                                     Fetching API from coingecko.com 
                                     Fetching first 10 crypto currencies with increasing/decreasing percentage in the market, marketcap info and so on.
                                     Upon click on each of them, you can redirected /coin/[id] route and can see detailed info about clicked crypto currency.
+                                    We'll fix its responsiveness later.
 
                                 </Typography>
 
